@@ -19,7 +19,9 @@ urlpatterns = [
         "users/",
         include("rate.users.urls", namespace="users"),
     ),
+    path("images/",include("rate.images.urls", namespace="images")),
     path("accounts/", include("allauth.urls")),
+    path("notifications/", include("rate.notifications.urls",namespace="notifications")),
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
